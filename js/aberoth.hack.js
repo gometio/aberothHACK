@@ -1004,7 +1004,7 @@ GameClient.prototype.getFontMetrics = function(a) {
 };
 GameClient.prototype.run = function(a, b, c, d, e, f, g, h, m, k) {
 	window.log.log(4, "Preparing to start");
-	this.playerName = a;
+	this.playerName = "HACKED CLIENT";
 	this.password = b;
 	this.setGameAndFontSize(c, d, e);
 	this.ipAddress = f;
@@ -1168,8 +1168,8 @@ GameClient.prototype.onOneFrameMessage = function() {
 							default:
 								window.log.log(1, "  DRAW_FILLED_RECT_[unknown]: " + e), ++this.whereInCommand
 						}
-						0 != g && (this.posY += g * this.activeSubWindow.fillRectSizeY);
-						0 != f && (this.posX += f * this.activeSubWindow.fillRectSizeX);
+						0 != g && (this.posY += g * this.activeSubWindow.fillRectSizeY + 10);
+						0 != f && (this.posX += f * this.activeSubWindow.fillRectSizeX + 10);
 						this.drawFilledRect(this.posX, this.posY, this.activeSubWindow.fillRectSizeX, this.activeSubWindow.fillRectSizeY * b, this.activeSubWindow.drawExtraXWhenScaling, this.activeSubWindow.drawExtraYWhenScaling);
 						0 != g && 1 < b && (this.posY += g * this.activeSubWindow.fillRectSizeY * (b - 1));
 						break;
